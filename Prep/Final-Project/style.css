@@ -1,0 +1,179 @@
+
+html{
+    margin: 0 ;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #B38F7F;
+}
+
+
+body {
+    margin: 0px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#Banner{
+    background-color: #5C4033;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+    gap: 100px;
+
+}
+ #Banner .Image{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    width:  25%;
+    align-items: center;
+ }
+ #Banner .Image img{
+    border-radius: 50%;
+    height:  80%;
+ }
+ #Banner .Title{
+
+    color:  white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+    font-family: Verdana;
+
+
+
+ }
+
+ .Title h1{
+    
+   font-size: 100px;
+   margin: 0 ;
+ }
+ .Title h5{
+    
+    font-size: 40px;
+    margin: 0 ;
+  }
+
+
+nav {
+    background-color: #512E1F;
+    position: fixed;
+    background-size: cover;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    display: inline;
+    height: 15px;
+   z-index: 1000;
+}
+
+nav a {
+     margin-right: 20px;
+    color: #B38F7F;
+    text-decoration: none;
+}
+nav a:hover{
+    color: blue
+}
+
+
+#Main {
+    padding-top: 400px;
+    margin: 0px 50px;
+    
+}
+
+#Main h2{
+    color: #3B1B0D;
+    border-bottom: 1px solid gold ;
+    font-size: 75px;
+    font-weight: bold;
+    width: auto;
+    
+
+}
+
+p{
+    font-size: 3vh;
+}
+#Biography p{
+    width: 50%;
+}
+
+#Biography img{
+    float: right;
+    width: 40%;
+    margin: 100px 0 0 50px
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+h4 {
+    font-size: 0.95rem;
+}
+
+
+
+.card {
+    
+    background: #896758;
+    border-radius: 8px;
+    padding: 15px;
+    width: 400px;
+    height: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#Awards .card {
+    background: #896758;;
+    border-radius: 8px;
+    padding: 15px;
+    width: 400px;
+    height: 650px;
+   
+}
+
+.image {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image img {
+    width: 400px;
+    height: 400px;
+    
+}
+
+#Purple_Heart{
+ height: 550px;   
+ position: relative;
+ top: -150px;
+
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Challenge || Materialize CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Tribute Project </title>
+</head>
+
+<body>
+  <article id="Banner">
+
+    <div class="Image">
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="Desmond Doss"></a>
+    </div>
+
+    <div class="Title">
+      <h5>In Loving Memory</h5>
+      <h1>Desmond Doss</h1>
+      <h5>1919-2006</h5>
+    </div>
+
+  </article>
+
+  <nav>
+    <a href="#Banner">Home</a>
+    <a href="#Biography">Biography</a>
+    <a href="#Battles">Battles</a>
+    <a href="#Awards">Awards</a>
+    <a href="#Film">Film</a>
+  </nav>
+  <br>
+
+  <section id="Main">
+
+    <article id="Biography">
+
+      <h2>Biography</h2>
+      <br>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsVzharvH_9gp7QuzLyvglxR_79zYm2WhMFQ&sjpg"
+        alt="Recieving Medal of Honor " id="Biography-Img">
+      <p>Desmond Doss was a U.S. Army medic during World War II and is best known for his remarkable acts of heroism
+        during the Battle of Okinawa, for which he became the first conscientious objector to receive the Medal of
+        Honor. Born on February 7, 1919, in Virginia, Doss was raised in a devout Seventh-day Adventist family, which
+        instilled in him a strong commitment to pacifism.</p>
+
+      <p>Despite his beliefs, Doss felt a duty to serve his country and enlisted in the Army in 1942. He chose to
+        become
+        a medic, refusing to carry a weapon due to his religious convictions. His determination and bravery were
+        evident
+        during the intense combat of Okinawa, where he single-handedly rescued dozens of wounded soldiers while under
+        enemy fire, demonstrating extraordinary courage without ever firing a shot.</p>
+
+      <p>
+        For his actions, which included saving an estimated 75 men during the brutal fighting on Hacksaw Ridge, Doss
+        was
+        awarded the Medal of Honor by President Harry S. Truman in 1945. Doss's story has inspired numerous books and
+        films, notably the 2016 movie "Hacksaw Ridge," which brought renewed attention to his legacy.</p>
+
+      <p>After the war, Doss returned to civilian life, marrying Frances Doss and having one son. He lived a quiet
+        life
+        and continued to promote his faith until his death on March 23, 2006, in Chattanooga, Tennessee. Desmond Doss
+        is
+        celebrated not only for his bravery in the face of combat but also for his steadfast adherence to his beliefs.
+      </p>
+    </article>
+    <article id="Battles">
+      <h2>Battles</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3 class="card-title">Battle of Guam</h3>
+
+          <ul>
+            <li>Dates: 21/07/44 - 10/08/44</li>
+            <li>Campaign: Mariana and Palau Islands campaign</li>
+            <li><a href="https://en.wikipedia.org/wiki/Battle_of_Guam_(1944)" target="_blank">learn more...</a></li>
+          </ul>
+
+        </div>
+        <div class="card">
+          <h3 class="card-title">Battle of Leyte</h3>
+          <ul>
+            <li>Dates: 17/10/44 - 26/12/44</li>
+            <li>Campaign: Philippines campaign</li>
+            <li><a href="https://en.wikipedia.org/wiki/Battle_of_Leyte" target="_blank">learn more...</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Battle of Okinawa</h3>
+          <ul>
+            <li>Dates: 01/04/45 - 22/06/45</li>
+            <li>Campaign: Volcano and Ryukyu Islands campaign</li>
+            <li><a href="https://en.wikipedia.org/wiki/Battle_of_Okinawa" target="_blank">learn more...</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+
+    <article id="Awards">
+      <h2>Awards</h2>
+
+      <div class="card-container">
+        <div class="card">
+          <div class="image"><img src="https://mohmuseum.org/wp-content/uploads/Medal.png" alt="Medal of Honor"
+              id="Medal of Honor">
+          </div>
+          <h3 class="card-title">Medal of Honor</h3>
+
+          <ul>
+            <li>The United States Armed Forces' highest military decoration and is awarded to recognize those who have
+              distinguished themselves by acts of valor.</li>
+            <br>
+            <li>Times Awarded: 1</li>
+            <li><a href="https://en.wikipedia.org/wiki/Medal_of_Honor" target="_blank">learn more...</a></li>
+          </ul>
+
+        </div>
+        <div class="card">
+          <div class="image"><img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Purple_Heart_Medal.png/300px-Purple_Heart_Medal.png"
+              alt="Purple Heart" id="Purple_Heart">
+          </div>
+          <h3 class="card-title">Purple Heart</h3>
+          <ul>
+            <li>Awarded in the name of the president to those wounded or killed while serving</li>
+            <br>
+            <li>Times Awarded: 3</li>
+            <li><a href="https://en.wikipedia.org/wiki/Purple_Heart" target="_blank">learn more...</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="image"><img
+              src="https://w7.pngwing.com/pngs/722/463/png-transparent-bronze-star-medal-united-states-national-defense-service-medal-meritorious-service-medal-commendation-medal-united-states-air-medal-thumbnail.png"
+              alt="Bronze Star" id=" Bronze_Star">
+          </div>
+          <h3 class="card-title">Bronze Star</h3>
+          <ul>
+            <li>Awarded to members of the United States Armed Forces for either heroic achievement, heroic service,
+              meritorious achievement, or meritorious service in a combat zone.</li>
+            <br>
+            <li>Times Awarded: 2</li>
+            <li><a href="https://en.wikipedia.org/wiki/Bronze_Star_Medal" target="_blank">learn more...</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article id="Film">
+      <h2>Film</h2>
+      
+
+     
+      <p>Corpral doss's heroic acts in the battle of Okinawa inspried the award winning movie <a
+          href="https://www.imdb.com/title/tt2119532/" target="_blank"">Hacksaw Ridge(2016)</a>, played by actor Andrew Garfield.</p>
+    </article>
+  </section>
+
+ 
+
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
