@@ -90,9 +90,13 @@ for index in range(len(users)):
 print(numbers)
 
 
-print(dict(zip(users ,numbers)))
 
-print(dict(zip(numbers ,users)))
+disney_users_A = dict(zip(users ,numbers))
+print(disney_users_A)
 
-print(dict(zip(sorted(users) ,numbers)))
+disney_users_B =dict(zip(numbers ,users))
+print(disney_users_B)
+
+disney_users_C = dict(zip(sorted(users) ,numbers))
+print(disney_users_C)
 

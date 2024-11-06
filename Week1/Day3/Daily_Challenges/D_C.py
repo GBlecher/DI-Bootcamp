@@ -28,14 +28,14 @@
 
 
 
-# items_purchase = {
-#   "Water": "$1",
-#   "Bread": "$3",
-#   "TV": "$1,000",
-#   "Fertilizer": "$20"
-# }
+items_purchase = {
+  "Water": "$1",
+  "Bread": "$3",
+  "TV": "$1,000",
+  "Fertilizer": "$20"
+}
 
-# wallet = "$300"
+wallet = "$300"
 
 # ➞ ["Bread", "Fertilizer", "Water"]
 
@@ -55,24 +55,27 @@
 # # In fact the prices of Apple + Honey + Fan + Bananas + Pan is more that $100, so you cannot by the Pan, 
 # # instead you can by the Spoon that is $2
 
-items_purchase = {
-  "Phone": "$999",
-  "Speakers": "$300",
-  "Laptop": "$5,000",
-  "PC": "$1200"
-}
+# items_purchase = {
+#   "Phone": "$999",
+#   "Speakers": "$300",
+#   "Laptop": "$5,000",
+#   "PC": "$1200"
+# }
 
-wallet = "$1" 
+# wallet = "$1" 
 
 # ➞ "Nothing"
+
+
 bought_list = []
+ 
 wallet = int(wallet.replace("$",""))
 
 
+
+
 for value in items_purchase:
-    items_purchase[value]= items_purchase[value].replace(",","")
-    items_purchase[value]= items_purchase[value].replace("$","")
-    items_purchase[value]= int(items_purchase[value])
+    items_purchase[value]= int(items_purchase[value].replace(",","").replace("$",""))
     
 
 sorted_dict = sorted(items_purchase.keys())
