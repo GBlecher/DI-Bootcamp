@@ -47,6 +47,14 @@ class Farm:
             print(f"{key} : {value} ")  
         # OPTION2:
         # return self.animals
+    def get_animal_types(self):
+        self.animals = sorted(self.animals) 
+        return self.animals
+    def get_short_info(self):   
+        list = self.get_animal_types()
+        print(f"{self.farm_name}'s farm has {list[0]}s, {list[1]}s and {list[2]}s.")
+
+        
 
 
 macdonald = Farm("McDonald")
@@ -59,5 +67,8 @@ macdonald.get_info()
 # OPTION2:
 # print(macdonald.get_info()) 
 
-
 print("E-I-E-I-0!")
+
+# print(macdonald.get_animal_types())
+macdonald.get_short_info()
+

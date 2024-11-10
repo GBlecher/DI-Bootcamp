@@ -126,9 +126,9 @@ class Zoo:
         self.animals = sorted(self.animals)
         for animal in self.animals :
             first_letter = animal[0]
-            if first_letter not in grouped_list:
+           
                 
-                #TO CHECKER I STRUGGLED WITH THE GROUPING I TRIED A COUPLE OF WAYS BUT THEY DID NOT WORK  OUT
+                #TO CHECKER: I STRUGGLED WITH THE GROUPING I TRIED A COUPLE OF WAYS BUT THEY DID NOT WORK  OUT
     
                 
                
@@ -160,6 +160,3 @@ ramat_gan_safari.get_animals()
 # Example
 # Which animal should we add to the zoo --> Giraffe
 # x.add_animal(Giraffe)
-
-
-
