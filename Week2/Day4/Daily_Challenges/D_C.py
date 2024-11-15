@@ -70,3 +70,9 @@ sentence.check_frequency()
 
 # sentence.most_frequent()
 # sentence.unique_words()
+
+
+for(i = 0: i<n ; i++)
+{
+    array[i] +=1
+}
