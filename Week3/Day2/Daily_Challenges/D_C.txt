@@ -1,0 +1,8 @@
+1.
+will select 0  because if there is a null it will fail
+2.
+will select 2 because now it has 2 ids it can count
+3.
+ 0 same as number 1 ,because if there is a null it will fail
+4. 
+will select 2, the sub query effectively saying the same as the Q2 just asking for whats not NULL rather than what = 5 

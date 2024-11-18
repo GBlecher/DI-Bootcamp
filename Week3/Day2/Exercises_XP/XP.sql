@@ -76,9 +76,9 @@
 -- ORDER BY first_name ASC
 -- LIMIT 3;
 -- 4.
-SELECT last_name 
-FROM customers 
-ORDER BY last_name ASC;
+-- SELECT last_name 
+-- FROM customers 
+-- ORDER BY last_name ASC;
 
 
 -- EXERCISE 2>>>>>>>
