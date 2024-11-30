@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;        
+    height: 100%;     
+    overflow: hidden; 
+    padding: 20px 5px;
+    background-color: darkgray
+}
+body{
+   
+    display: flex;
+    flex-direction: row;
+}
+
+
+aside {
+    padding: 10px 5px; 
+    height: 90%;
+    width: 20%; 
+    float: left;
+    display: flex;              
+    flex-direction: column;
+    align-items: center;
+    background-color: darkgray;
+    overflow: hidden;
+    
+}
+
+#btn_container{
+    width: 95%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#pallet_container{
+    margin-top: 10px;
+    height: 60%;
+    width: 95%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+#main{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#canvas{
+
+    height: 90%;
+    width: 90%;
+    margin-top: -30px;
+}
