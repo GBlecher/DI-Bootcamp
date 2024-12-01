@@ -80,7 +80,7 @@ for( let row  =0 ; row < canvasHeight/10 ; row++)
                 console.log("mouseup")
             })
            
-            canTData.addEventListener("mouseover", function(event) {
+            canTData.addEventListener("mouseenter", function(event) {
                 if (mousedown) {
                     event.target.style.backgroundColor = brushColor; 
                     console.log("mouseover")
