@@ -1,110 +1,105 @@
 const express = require('express')
+const { getRandomEmoji} = require('./public/script.js')
 const cors = require('cors')
 const app = express()
-app.use(cors())
-
-
-app.use("/", express.static(__dirname + "/public"))
 const PORT = 5002
+app.use(cors())
+app.use(express.json())
+app.use("/", express.static(__dirname + "/public"))
+
 app.listen(PORT, () => {
     console.log((`run on ${PORT}`));
+})
 
-    let currentEmoji = null;
+let currentEmoji = null;
     let playerScore = 0;
     const leaderboard = [];
 
-})
 const emojis = [
     {
         character: "😀",
         name: "Grinning Face"
     },
     {
-        character: "😃",
-        name: "Grinning Face with Big Eyes"
+        character: "🐱",
+        name: "Cat Face"
     },
     {
-        character: "😄",
-        name: "Grinning Face with Smiling Eyes"
+        character: "🌮",
+        name: "Taco"
     },
     {
-        character: "😅",
-        name: "Grinning Face with Sweat"
+        character: "🚀",
+        name: "Rocket"
     },
     {
-        character: "🤣",
-        name: "Rolling on the Floor Laughing"
+        character: "🎉",
+        name: "Party Popper"
     },
     {
-        character: "😂",
-        name: "Face with Tears of Joy"
+        character: "🍕",
+        name: "Pizza"
     },
     {
-        character: "😊",
-        name: "Smiling Face with Smiling Eyes"
+        character: "🏝️",
+        name: "Desert Island"
     },
     {
-        character: "😇",
-        name: "Smiling Face with Halo"
+        character: "🐳",
+        name: "Whale"
     },
     {
-        character: "😉",
-        name: "Winking Face"
+        character: "🎶",
+        name: "Musical Notes"
     },
     {
-        character: "😍",
-        name: "Smiling Face with Heart-Eyes"
+        character: "🏆",
+        name: "Trophy"
     },
     {
-        character: "😎",
-        name: "Smiling Face with Sunglasses"
+        character: "⚽",
+        name: "Soccer Ball"
     },
     {
-        character: "😢",
-        name: "Crying Face"
+        character: "👾",
+        name: "Alien Monster"
     },
     {
-        character: "😡",
-        name: "Pouting Face"
+        character: "🦄",
+        name: "Unicorn"
     },
     {
-        character: "😱",
-        name: "Face Screaming in Fear"
+        character: "🍉",
+        name: "Watermelon"
     },
     {
-        character: "👍",
-        name: "Thumbs Up"
+        character: "⛷️",
+        name: "Skier"
     },
     {
-        character: "👎",
-        name: "Thumbs Down"
+        character: "🎨",
+        name: "Artist Palette"
     },
     {
-        character: "❤️",
-        name: "Red Heart"
+        character: "🧙",
+        name: "Mage"
     }
 ];
-
-function getRandomEmoji(emojiArray) {
-    const randomIndex = Math.floor(Math.random() * emojiArray.length);
-    return emojiArray[randomIndex];
-}
-
-
 
 
 app.get('/api/emojis', (req, res) => {
     res.json(emojis)
 })
 
-app.get('/api/emojis', (req, res) => {
-    currentEmoji = getRandomEmoji(emojis)
-
+app.get('/api/emojis/game', (req, res) => {
+    const currentEmoji = getRandomEmoji(emojis)
+    const emojidiplay = document.getElementById("emoji-display")
+    emojidiplay.appendChild(currentEmoji.character)
     const distractors = emojis.filter(emoji => emoji != currentEmoji)
     const selectedDistractors = []
 
     while (selectedDistractors.length < 3) {
-        const randomIndex = Math.floor(math.random() * distractors.length)
+        const randomIndex = Math.floor(Math.random() * distractors.length)
         const distractor = selectedDistractors[randomIndex]
         if (!selectedDistractors.includes(distractor)) {
             selectedDistractors.push(distractor);

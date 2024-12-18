@@ -9,8 +9,11 @@ const {
 
 const getAllPosts = (req, res) => {
   getAllPostsFromDB()
-    .then((data) => {
-      res.status(200).json(data);
+    .then((posts) => {
+      if (!posts || posts.length === 0) {
+        return res.status(404).json({ msg: "No posts found" });
+      }
+      res.status(200).json(posts);
     })
     .catch((error) => {
       console.log(error);
@@ -21,13 +24,15 @@ const getAllPosts = (req, res) => {
 const createPost = (req, res) => {
   console.log(req.body);
   const { title, content } = req.body;
+  if (!title || !content) {
+    return res.status(400).json({ msg: "Title and content are required" });
+  }
   createPostInDB({ title, content })
-  .then(posts => {
+  .then((posts) => {
     res.status(200).json(posts)
   })
   .catch((error)=> {
     console.log(error);
-    
   })
 };
 
@@ -47,23 +52,24 @@ const updatePost =(req, res) => {
 }
 
 const getPostById = (req, res) => {
-      const { id } = req.params
+const { id } = req.params
 
-      getPostByIdFromDB(id) 
-        .then(posts => {
-          if (!posts) {
-              return res.status(404).json({ error: "Post not found" })
-          }
-          res.status(200).json(posts)
-        })
+getPostByIdFromDB(id) 
+  .then(posts => {
+    if (!posts) {
+        return res.status(404).json({ error: "Post not found" })
+    }
+    res.status(200).json(posts)
+  })
   .catch (error => {
       console.log(error);
   })
-
+}
+ 
 const deletePost = (req, res) => {
   const { id } = req.params;
   deletePostFromDB(id) 
-  .then((result) => {C 
+  .then((result) => {
       if (result === 0) { 
           return res.status(404).json({ message: "Post not found to delete" });
       }
