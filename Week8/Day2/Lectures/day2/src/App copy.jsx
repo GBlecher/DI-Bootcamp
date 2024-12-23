@@ -1,28 +1,8 @@
-// import User from './components/User'
-// import './App.css'
-// import users from './users.json'
-
-// function App() {
-//   return (
-//     <>
-     
-//       {
-//         users.map((item,index) => {
-//           return <User key = {index} info={item}/>
-         
-//       })
-//     }
-//     </>
-//   )
-// }
-
-// export default App
-
-
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import ExapleUnmount from "./ExampleUnmout";
 
-function App() {
+function App(props) {
   // state = {}
 
   // let users = [{name:'Jonn', id:1}]
@@ -30,17 +10,26 @@ function App() {
    * state - users
    * setState - setUsers
    */
-  const [users, setUsers] = useState([{id:1, name:'aaa'}]);
-const [textInput,setTextInput] = useState("abc")
+  const [users, setUsers] = useState([]);
+  const [textInput, setTextInput] = useState("abc");
+  const [unmount, setUnmount] = useState(false);
+
+  /** component  mount */
+  /** component  update */
+  useEffect(() => {
+    console.log("useEffect=>", users);
+    if (textInput !== "abc") {
+      handleClick();
+    }
+  }, [textInput, props.id]);
+
   const handleClick = async () => {
     try {
       const res = await fetch("https://jsonplaceholder.typicode.com/users");
       const data = await res.json();
       // console.log(data);
-      
-      setUsers(data)
-    
-      console.log(users);
+      setUsers(data);
+      // console.log(users);
     } catch (error) {
       console.log(error);
     }
@@ -56,10 +45,9 @@ const [textInput,setTextInput] = useState("abc")
 
   const handleInput = (e) => {
     console.log("hello from input", e.target.value);
-    setTextInput(e.target.value)
+    setTextInput(e.target.value);
   };
 
-  console.log(users);
   return (
     <>
       <h2>Events,State,Class vs. Function</h2>
@@ -71,6 +59,14 @@ const [textInput,setTextInput] = useState("abc")
       })}
       <h2>Display here the input value</h2>
       <h3>{textInput}</h3>
+      {unmount ? null : <ExapleUnmount />}
+      <div>
+        <button onClick={() => setUnmount(!unmount)}>
+          
+          {unmount ? 'mount me' : 'unmount me'}
+          
+        </button>
+      </div>
     </>
   );
 }
