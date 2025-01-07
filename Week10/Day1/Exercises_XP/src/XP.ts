@@ -64,3 +64,31 @@
 
 // ___________________________________________________________________
 /* 🌟 Exercise 7: Type Assertions*/
+
+// const inputElement = document.getElementById("myInput") as HTMLInputElement;
+
+
+
+// const button = document.getElementById("setValueButton");
+//     if (button) {
+//         button.addEventListener("click", () => {
+//             const input = inputElement.value 
+//         });
+//         console.log(input)
+//     }
+
+ // ___________________________________________________________________
+/* 🌟 Exercise 9: Function Overloading with Default Parameters*/   
+
+function greet(): string;
+function greet(name: string): string;
+
+function greet(name?: string): string {
+    if (name) {
+        return `Hello, ${name}!`;
+    }
+    return 'Hello, there!';
+}
+
+console.log(greet());
+console.log(greet('Alice'));
